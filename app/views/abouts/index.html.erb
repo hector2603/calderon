@@ -1,0 +1,28 @@
+<% if user_signed_in? %>
+  <%= render 'navegacion/navPrivate' %>
+<% else %>
+  <%= render 'navegacion/navPublic' %>
+<% end %>
+<div class="panel">
+  <div class="row">
+    <div class="col-md-12 ">
+      <ol class="breadcrumb">
+        <li><%= link_to 'Inicio', root_url %></li>
+        <li class="active">Quiénes Somos</li>
+      </ol>
+    </div>
+  </div>
+  <h1 class="text-center"><%= @about.titulo %></h1>
+  <div class="panel-body">
+    <%= @about.texto %>
+  </div>
+  <% if user_signed_in? %>
+    <nav>
+      <ul class="pager">
+        <%= link_to 'Editar', edit_about_path(@about) , :class => "btn btn-primary"%> 
+      </ul>
+    </nav>
+  <% end %>
+</div>
+
+<%= link_to 'New About', new_about_path %>

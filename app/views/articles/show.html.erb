@@ -1,0 +1,43 @@
+<% if user_signed_in? %>
+	<%= render 'navegacion/navPrivate' %>
+<% else %>
+	<%= render 'navegacion/navPublic' %>
+<% end %>
+<% if notice %>
+	<p id="notice" class="alert alert-success"><%= notice %></p>
+<%end%>
+<div class="panel">
+	<div class="row">
+		<div class="col-md-12 ">
+			<ol class="breadcrumb">
+				<li><%= link_to 'Inicio', root_url %></li>
+				<li><%= link_to 'Artículos', articles_path %></li>
+				<li class="active"><%= @article.titulo %></li>
+			</ol>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-offset-2 col-md-8">
+			<h1 class="text-center">
+			  <%= @article.titulo %>
+			</h1></br>
+			<% if @article.cover %>
+				<div class="center-block">
+					<%= image_tag @article.cover.url(:medium), :class => "img-responsive"%>
+				</div></br>
+			<%end %>
+			<p >
+			  <%= Sanitize.fragment(@article.body,Sanitize::Config::RELAXED).html_safe %>
+			</p>
+			<% if user_signed_in? %>
+				<nav>
+				  <ul class="pager">
+					<%= link_to 'Editar', edit_article_path(@article), :class => "btn btn-primary"%>
+					<%= link_to 'Atras', articles_path, :class => "btn btn-primary" %>
+					<%= link_to 'Eliminar', @articles, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-primary" %>	
+				  </ul>
+				</nav>
+			<% end %>
+		</div>
+	</div>
+</div>

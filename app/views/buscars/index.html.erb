@@ -1,0 +1,73 @@
+<% if user_signed_in? %>
+  <%= render 'navegacion/navPrivate' %>
+<% else %>
+  <%= render 'navegacion/navPublic' %>
+<% end %>
+<div class="panel">
+  <div class="row">
+    <div class="col-md-12 ">
+      <ol class="breadcrumb">
+        <li><%= link_to 'Inicio', root_url %></li>
+        <li class="active">Buscar</li>
+      </ol>
+    </div>
+  </div>
+  <div class="panel-body">
+    <%if @articles[0]!=nil %>
+      <h1 class="text-center">Artículos</h1>
+      <% @articles.each do |article| %>
+        <div class="panel panel-success ">
+          <div class="panel-heading">
+            <h3 class="panel-title"><%= link_to article.titulo, controller: "articles", action: "show", id: article.id %></h3>
+          </div>
+          <div class="panel-body">
+              <div class="col-md-4">
+                <%= link_to(article,:class=>"thumbnail") do %>
+                  <%= image_tag article.cover.url %>
+                <% end %>
+              </div>
+              <div class="col-md-8">
+                <%= article.resumen %>
+              </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+    <%if @services[0]!=nil %>
+      <h1 class="text-center">Servicios</h1>
+      <div class="row">
+        <% @services.each do |service| %>
+          <div class="col-md-4">
+            <div class="panel panel-success ">
+              <div class="panel-heading">
+                <h3 class="panel-title"><%= link_to service.nombre, service %></h3>
+              </div>
+              <div class="panel-body">
+                <%= service.resumen %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+    <%if @insurances[0]!=nil %>
+      <h1 class="text-center">Seguros</h1>
+      <div class="row">
+        <% @insurances.each do |insurance| %>
+          <div class="col-md-4">
+            <div class="panel panel-success ">
+              <div class="panel-heading">
+                <h3 class="panel-title"><%= link_to insurance.nombre, insurance %></h3>
+              </div>
+              <div class="panel-body">
+                <%= insurance.resumen %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+
+  </div>
+</div>
+

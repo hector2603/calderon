@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Vehiculo:</strong>
+  <%= @soat_private.vehiculo %>
+</p>
+
+<p>
+  <strong>Clase:</strong>
+  <%= @soat_private.clase %>
+</p>
+
+<p>
+  <strong>Prima:</strong>
+  <%= @soat_private.prima %>
+</p>
+
+<p>
+  <strong>Contribucion:</strong>
+  <%= @soat_private.contribucion %>
+</p>
+
+<p>
+  <strong>Tasa:</strong>
+  <%= @soat_private.tasa %>
+</p>
+
+<%= link_to 'Edit', edit_soat_private_path(@soat_private) %> |
+<%= link_to 'Back', soat_privates_path %>

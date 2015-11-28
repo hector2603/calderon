@@ -1,0 +1,43 @@
+<% if user_signed_in? %>
+  <%= render 'navegacion/navPrivate' %>
+<% else %>
+  <%= render 'navegacion/navPublic' %>
+<% end %>
+<div class="panel">
+  <div class="row">
+    <div class="col-md-12 ">
+      <ol class="breadcrumb">
+        <li><%= link_to 'Inicio', root_url %></li>
+        <li class="active">Contactos</li>
+      </ol>
+    </div>
+  </div>
+  <h1 class="text-center">Contactos</h1>
+  <div class="panel-body">
+    <% @contactos.each do |contacto| %>
+      <div class="panel panel-success ">
+        <div class="panel-heading">
+          <div class="row">
+            <div class="col-md-8">
+              <h3 class="panel-title">Asunto: <%= link_to contacto.asunto, contacto %></h3>
+            </div>
+            <div class="col-md-4">
+              <%= contacto.created_at %>
+            </div>
+          </div>
+        </div>
+        <div class="panel-body">
+            <div class="col-md-4">
+              <%= contacto.nombre %>
+            </div>
+            <div class="col-md-8">
+              <%= contacto.texto %>
+            </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+<%= link_to 'New Contacto', new_contacto_path %>

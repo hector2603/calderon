@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-md-offset-0 col-md-12">
+    <%= form_for(@type) do |f| %>
+      <% if @type.errors.any? %>
+        <div id="error_explanation">
+          <h2>hay <%= pluralize(@type.errors.count, "errore") %></h2>
+          <ul>
+          <% @type.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <div class="form-group">
+        <%= f.label :nombre %><br>
+        <%= f.text_field :nombre ,:class => 'form-control'%>
+      </div>
+      <div class="actions">
+        <%= f.submit :Terminar ,:class =>'btn btn-success'%>
+      </div>
+    </br>
+    <% end %>
+  </div>
+</div>

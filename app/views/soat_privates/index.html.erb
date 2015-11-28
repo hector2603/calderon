@@ -1,0 +1,49 @@
+<% if user_signed_in? %>
+  <%= render 'navegacion/navPrivate' %>
+<% else %>
+  <%= render 'navegacion/navPublic' %>
+<% end %>
+<div class="panel">
+  <div class="row">
+    <div class="col-md-12 ">
+      <ol class="breadcrumb">
+        <li><%= link_to 'Inicio', root_url %></li>
+        <li class="active">Soat</li>
+      </ol>
+    </div>
+  </div>
+  <h1 class="text-center">Soat</h1>
+  <div class="panel-body">
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Vehículo</th>
+            <th>Clase de vehículo</th>
+            <th>Prima</th>
+            <th>Contribución</th>
+            <th>Tasa runt</th>
+            <th>Total</th>
+            <th colspan="1"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @soat_privates.each do |soat_private| %>
+            <tr>
+              <td><%= soat_private.vehiculo %></td>
+              <td><%= soat_private.clase %></td>
+              <td><%= soat_private.prima %></td>
+              <td><%= soat_private.contribucion %></td>
+              <td><%= soat_private.tasa %></td>
+              <td><%= soat_private.tasa+soat_private.contribucion+soat_private.prima %></td>
+              <td><%= link_to 'Editar', edit_soat_private_path(soat_private), :class =>"btn btn-default" %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<%= link_to 'New Soat private', new_soat_private_path %>

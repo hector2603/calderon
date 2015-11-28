@@ -1,0 +1,25 @@
+<% if user_signed_in? %>
+	<%= render 'navegacion/navPrivate' %>
+<% else %>
+	<%= render 'navegacion/navPublic' %>
+<% end %>
+
+
+<div class="row">
+	<div class="col-md-offset-2 col-md-8 panel">
+		<div class="row">
+			<div class="col-md-12 ">
+			  <ol class="breadcrumb">
+			    <li><%= link_to 'Inicio', root_url %></li>
+			    <li class="active">Crar Registro de Soat</li>
+			  </ol>
+			</div>
+		</div>
+		<h1 class="text-center">Crar Registro de Soat</h1>
+			<%= render 'form' %>
+		<div class="form-group">
+			<%= link_to 'Atras', soat_privates_path, :class =>'btn btn-primary' %>
+		</div>
+	</div>
+</div>
+

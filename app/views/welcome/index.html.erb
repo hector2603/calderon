@@ -1,0 +1,105 @@
+<%= render 'navegacion/navPublic' %>
+<div class="row">
+			<div class="col-md-9">
+				<div class="row">
+					<div class="row">
+						<div class="col-md-12">
+							<div id="myCarousel" class="carousel slide" data-ride="carousel">
+							  <!-- Indicators -->
+							  <ol class="carousel-indicators">
+							    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+							    <li data-target="#myCarousel" data-slide-to="1"></li>
+							    <li data-target="#myCarousel" data-slide-to="2"></li>
+							    <li data-target="#myCarousel" data-slide-to="3"></li>
+							  </ol>
+
+							  <!-- Wrapper for slides -->
+							  <div class="carousel-inner" role="listbox">
+							    <div class="item active">
+							    	<%= image_tag "banner-dian.jpg", :alt => "Dian", :title => "Dian"%>
+							    </div>
+
+							    <div class="item">
+							    	<%= image_tag "banner-finanzas.jpg", :alt => "Finanzas", :title => "Finanzas"%>
+							    </div>
+
+							    <div class="item">
+							    	<%= image_tag "banner-laboral.jpg", :alt => "Laboral", :title => "Laboral"%>
+							    </div>
+
+							    <div class="item">
+							    	<%= image_tag "banner-sistematizacion.jpg", :alt => "Sistematizacion", :title => "Sistematizacion"%>
+							    </div>
+							  </div>
+
+							  <!-- Left and right controls -->
+							  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+							    <span aria-hidden="true">
+							    	<%= fa_icon "arrow-left"%>
+							    </span>
+							    <span class="sr-only">Previous</span>
+							  </a>
+							  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+							  	<span aria-hidden="true">
+							  		<%= fa_icon "arrow-right"%>
+							  	</span>
+							    <span class="sr-only">Next</span>
+							  </a>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+					  <div class="panel-body">
+						<% @articles.each do |article| %>
+						  <div class="panel panel-success ">
+						    <div class="panel-heading">
+						      <h3 class="panel-title"><%= link_to article.titulo, article %></h3>
+						    </div>
+						    <div class="panel-body">
+						        <div class="col-md-4">
+									<%= link_to(article,:class=>"thumbnail") do %>
+										<%= image_tag article.cover.url %>
+									<% end %>
+						        </div>
+						        <div class="col-md-8">
+						        	<p>
+						          		<%= article.resumen %>
+						        	</p>
+						        </div>
+						    </div>
+						  </div>
+						<% end %>
+					  </div>
+					  <div class="panel-footer">
+					  	<%= link_to 'Ver Todos', articles_path ,:class=>"btn btn-default"%>
+					  </div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="panel panel-default">
+				  <div class="panel-body">
+				    <legend>Cotiza tu SOAT</legend>
+				    <!--<div class="form-group">
+				      <label for="inputNombre" class="col-lg-2 control-label">Nombre</label>
+					      <br><br>
+				      <div class="col-lg-10">
+				        <input type="text" class="form-control" id="inputNombre" placeholder="Nombre">
+				      </div>
+				    </div>-->
+				    <div class="form-group">
+				      <div class="col-lg-10">
+						<%= link_to(quotes_path,:class=>"thumbnail") do %>
+							<%= image_tag "soatInicio.jpg", :alt => "imagenSoat", :title => "ImagenSoat"%>
+						<% end %>
+				      </div>
+				    </div>
+				    <div class="form-group">
+				      <div class="col-lg-10 col-lg-offset-2">
+				      	<%=link_to "Cotizar",quotes_path, :class => "btn btn-success"%>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</div>
+		</div>		

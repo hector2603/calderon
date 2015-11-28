@@ -1,0 +1,54 @@
+<div class="row">
+  <div class="col-md-offset-0 col-md-12">
+    <%= form_for(@article,html:{id: "articles_form"}) do |f| %>
+      <% if @article.errors.any? %>
+        <div id="error_explanation">
+          <h2>Hay <%= pluralize(@article.errors.count, "errore") %> :</h2>
+
+          <ul>
+          <% @article.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <div class="form-group">
+        <%= f.label :título %>
+        <%= f.text_field :titulo ,:class => 'form-control'%>
+      </div>
+      <div class="form-group">
+        <%= f.label :resumen %><br>
+        <%= f.text_area :resumen ,:class => 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :Texto %><br>
+        <%= f.text_area :body ,:class => 'form-control',style:"display:none", id:"textoArticulo"  %>
+        <%= f.text_area :markup_body ,:class => 'form-control',style:"display:none", id:"markupTextoArticulo"  %>
+        <div id="epiceditor" style="height:250px;"></div>
+      </div>
+      <div class="form-group">
+        <%= f.label :Portada %>
+        <%= f.file_field :cover %>
+        <p class="help-block">Archivos permitidos: jpg, jpeg y png</p>
+      </div>
+      <div class="actions">
+        <%= f.submit :Terminar ,:class =>'btn btn-success'%>
+      </div>
+    </br>
+    <% end %>
+    <script >
+      var editor = new EpicEditor({
+        textarea: "markupTextoArticulo",
+        file:{
+          name:"texto_articulo"
+        }
+      });
+      editor.load();
+      $("#articles_form").on("submit",function(){
+        $("#textoArticulo").val(editor.exportFile("texto_articulo","html"));
+        $("#markupTextoArticulo").val(editor.exportFile("texto_articulo"));
+      });
+
+    </script>
+  </div>
+</div>

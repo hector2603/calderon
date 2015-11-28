@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  vehiculo: MyString
+  clase: MyString
+  prima: 1
+  contribucion: 1
+  tasa: 1
+
+two:
+  vehiculo: MyString
+  clase: MyString
+  prima: 1
+  contribucion: 1
+  tasa: 1

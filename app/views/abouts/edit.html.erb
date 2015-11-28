@@ -1,0 +1,18 @@
+<%= render 'navegacion/navPrivate' %>
+<div class="row">
+	<div class="col-md-offset-2 col-md-8 panel">
+		<div class="row">
+			<div class="col-md-12">
+			  <ol class="breadcrumb">
+			    <li><%= link_to 'Inicio', root_url %></li>
+			    <li class="active">Editar Quiénes Somos</li>
+			  </ol>
+			</div>
+		</div>
+		<h1 class="text-center">Editar </h1>
+		<%= render 'form' %>
+		<div class="form-group">
+			<%= link_to 'Atras', abouts_path, :class =>'btn btn-primary' %>
+		</div>
+	</div>
+</div>

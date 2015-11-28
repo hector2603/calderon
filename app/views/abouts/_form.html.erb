@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-md-offset-0 col-md-12">
+    <%= form_for(@about) do |f| %>
+      <% if @about.errors.any? %>
+        <div id="error_explanation">
+          <h2>hay<%=  pluralize(@about.errors.count, "errore") %> </h2>
+
+          <ul>
+          <% @about.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="form-group">
+        <%= f.label :título %>
+        <%= f.text_field :titulo ,:class => 'form-control'%>
+      </div>
+      <div class="form-group">
+        <%= f.label :texto %><br>
+        <%= f.text_area :texto ,:class => 'form-control' %>
+      </div>
+      <div class="actions">
+        <%= f.submit :Terminar ,:class =>'btn btn-success'%>
+      </div>
+    </br>
+    <% end %>
+  </div>
+</div>

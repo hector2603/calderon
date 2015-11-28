@@ -1,0 +1,37 @@
+<% if user_signed_in? %>
+  <%= render 'navegacion/navPrivate' %>
+<% else %>
+  <%= render 'navegacion/navPublic' %>
+<% end %>
+<div class="panel">
+  <div class="row">
+    <div class="col-md-12 ">
+      <ol class="breadcrumb">
+        <li><%= link_to 'Inicio', root_url %></li>
+        <li class="active">Servicios</li>
+      </ol>
+    </div>
+  </div>
+  <div class="panel-body">
+    <div class="col-md-2">
+      <div class="btn-group-vertical well" role="group" aria-label="...">
+        <h3 class="text-center">Servicios</h3>
+        <% @types.each do |type| %>
+          <%= link_to type.nombre, {controller: "services", action: "index", tipo_id: type.id}, :class =>"btn btn-default" %>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-md-10">
+      <h1 class="text-center">Outsourcing</h1>
+      <p>
+        Brindamos servicio de acompañamiento contable y fiscal con un Contador profesional para la revisión de los registros de la operación del negocio y liquidación de impuestos nacionales y locales, con un acompañamiento tributario preventivo legal a la que todas las empresas tienen derecho con el ánimo de buscar reducir, eliminar o diferir la carga tributaria en la organización.
+        <br>
+        <br>
+        El servicio de planeación Fiscal permite a la organización considerar las alternativas de ahorro en impuestos, que se incurren en su operación y/o la ejecución de proyectos de inversión.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+

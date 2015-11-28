@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-md-offset-0 col-md-12">
+    <%= form_for(@soat_private) do |f| %>
+      <% if @soat_private.errors.any? %>
+        <div id="error_explanation">
+          <h2> Hay <%= pluralize(@soat_private.errors.count, "errore") %> </h2>
+
+          <ul>
+          <% @soat_private.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="form-group">
+        <%= f.label :Vehículo %><br>
+        <%= f.text_field :vehiculo ,:class => 'form-control'%>
+      </div>
+      <div class="form-group">
+        <%= f.label "Clase de vehículo" %><br>
+        <%= f.text_field :clase ,:class => 'form-control'%>
+      </div>
+      <div class="form-group">
+        <%= f.label :Prima %><br>
+        <%= f.number_field :prima ,:class => 'form-control'%>
+      </div>
+      <div class="form-group">
+        <%= f.label :Contribución %><br>
+        <%= f.number_field :contribucion ,:class => 'form-control'%>
+      </div>
+      <div class="form-group">
+        <%= f.label "Tasa Runt" %><br>
+        <%= f.number_field :tasa ,:class => 'form-control'%>
+      </div>
+      <div class="actions">
+        <%= f.submit :Terminar ,:class =>'btn btn-success'%>
+      </div>
+    <% end %>
+  </div>
+</div>
+</br>

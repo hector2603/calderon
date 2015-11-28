@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+SeguroDeVida:
+  nombre: Segudo de Vida
+  resumen: Seguro prestado
+  descripcion: Seguro prestado
+
+SeguroDeCasa:
+  nombre: Seguro de Casa
+  resumen: Seguro prestado
+  descripcion: Seguro prestado

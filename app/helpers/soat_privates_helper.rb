@@ -1,0 +1,2 @@
+module SoatPrivatesHelper
+end

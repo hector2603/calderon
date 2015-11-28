@@ -1,0 +1,7 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+tipo1:
+  nombre: tipo_prueba1
+
+two:
+  nombre: MyString

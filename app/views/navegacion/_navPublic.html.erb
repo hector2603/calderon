@@ -1,0 +1,58 @@
+	    </div>
+	  </div>
+	</nav>
+</div>
+<div class="row">
+	<nav class="navbar navbar-inverse">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <%= link_to 'Calderón González', root_url ,:class => "navbar-brand"%>
+	    </div>
+
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+	      <ul class="nav navbar-nav">
+	      	<li class="margen_nav">
+	      		<div class="btn-group" role="group" aria-label="...">
+	      			<%= link_to 'Servicios', types_path , type:"button", :class =>"btn btn-default border_boton" %>
+
+				  <div class="btn-group" role="group">
+				    <a type="button" class="btn btn-default dropdown-toggle border_boton" data-toggle="dropdown" aria-expanded="false">
+				      <span class="caret"></span>
+				    </a>
+				    <ul class="dropdown-menu" role="menu" id="boton_servicios">
+				    </ul>
+				  </div>
+				</div>
+				<script >
+					ajaxServicios();
+				</script>
+			</li>
+	        <li><%= link_to "Seguros", insurances_path %></li>
+	        <li><%= link_to "SOAT", quotes_path %></li>
+	        <li><%= link_to 'Quiénes Somos', abouts_path %></li>
+	        <li><%= link_to 'Contacto', new_contacto_path %></li>
+	      </ul>
+			<div class="navbar-form navbar-right" >
+				<%= form_tag("/buscars", method: "get") do %>
+				  <%= text_field_tag(:busqueda,"",{:class=>"form-control",:placeholder=>"Buscar"}) %>
+				  <%= submit_tag("Buscar",:class=>"btn btn-default") %>
+				<% end %>
+			</div>
+	    </div>
+	  </div>
+	</nav>
+</div>
+<div class="row">
+	<% if notice %>
+	  <p class="alert alert-success"><%= notice %></p>
+	<% end %>
+	<% if alert %>
+	  <p class="alert alert-danger"><%= alert %></p>
+	<% end %>
+</div>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">	<meta charset="utf-8">
+  	<title>Calderon</title>
+  	<script >
+  		//alert("Hola");
+  	</script>
+  	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  	<%= csrf_meta_tags %>
+  	<%= favicon_link_tag 'favicon.ico' %>
+</head>
+<body class="nada" id="cuerpo">
+	<div class="wrapper">
+		
+		    <%= link_to(root_path) do %>
+		      <%= image_tag "portada3.png",:class=>"img img-responsive", :alt => "calderon gonzales", :title => " calderon gonzales"%>
+		    <%end%>
+	
+	</div>	
+	<div class="container contenedor">	
+
+
+		<div class="row">
+			<nav class="navbar navbar-default ">
+			  <div class="container-fluid">
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <%= link_to 'Accesibilidad', root_url ,:class => "navbar-brand"%>
+			    </div>
+
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      <ul class="nav navbar-nav">
+			        <li >
+					  <a href="javascript:decreaseFontSize();">Disminuir Tamaño A-</a> 
+					</li>
+			        <li >
+					  <a href="javascript:increaseFontSize();">Aumentar Tamaño A+</a>
+					</li>
+					<li>
+					  <a  href="javascript:accesibiliza();">Contraste Alto</a>
+					</li>
+			      </ul>
+
+
+		<%= yield %>
+
+	</div>
+	<footer class="row">
+		<div class="col-md-4 col-md-offset-1">
+			<h1>Calderón gonzález</h1>
+		</div>
+		<div class="col-md-4 col-md-offset-1">
+			<div class="row">
+				<div class="col-md-12">
+					<a href="https://www.facebook.com/pages/Calderon-Gonzalez-Seguros/249527458560283?fref=ts">
+						<%= fa_icon("facebook-official", text: "Facebook", class: "fa-4x" ) %>
+					</a><br>
+					<%= fa_icon("phone-square", text: "316 499 0558 - 31 3596", class: "fa-4x" ) %><br>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-2">
+					<%= fa_icon("envelope-o", text: "", class: "fa-4x" ) %>				
+				</div>
+				<div class="col-md-6">
+					<br>
+					<a href="mailto:servicioalcliente@calderongonzalez.com">
+						servicioalcliente@calderongonzalez.com
+					</a><br>			
+					<a href="mailto:comercial@calderongonzalez.com">
+						comercial@calderongonzalez.com
+					</a><br>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script >
+		accesibilidad();
+		cotiza();
+	</script>
+</body>
+</html>

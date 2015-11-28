@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-md-offset-0 col-md-12">
+    <%= form_for(@contacto) do |f| %>
+      <% if @contacto.errors.any? %>
+        <div id="error_explanation">
+          <h2>Hay <%=  pluralize(@contacto.errors.count, "errore") %> que no dejan enviar </h2>
+
+          <ul>
+          <% @contacto.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <div class="form-group">
+        <%= f.label :Nombre %><br>
+        <%= f.text_field :nombre ,:class => 'form-control'%>
+      </div>
+      <div class="form-group">
+        <%= f.label :Asunto %><br>
+        <%= f.text_field :asunto ,:class => 'form-control'%>
+      </div>
+      <div class="form-group">
+        <%= f.label :Texto %><br>
+        <%= f.text_area :texto ,:class => 'form-control'%>
+      </div>
+      <div class="form-group">
+        <%= f.label "Número Telefonico" %><br>
+        <%= f.text_field :numero ,:class => 'form-control'%>
+        <p class="help-block">Por favor llena todos los campos</p>
+      </div>
+      <div class="actions">
+        <%= f.submit :Enviar ,:class =>'btn btn-success'%>
+      </div>
+    <% end %>
+  </div>
+</div>

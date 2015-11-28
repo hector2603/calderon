@@ -1,0 +1,20 @@
+<%= render 'navegacion/navPrivate' %>
+<div class="row">
+	<div class="col-md-offset-2 col-md-8 panel">
+		<div class="row">
+			<div class="col-md-12 ">
+			  <ol class="breadcrumb">
+			    <li><%= link_to 'Inicio', root_url %></li>
+			    <li class="active">Editar Servicio</li>
+			  </ol>
+			</div>
+		</div>
+		<h1 class="text-center">Editar Servicio</h1>
+		<%= render 'form' %>
+		<div class="form-group">
+			<%= link_to 'Ver Servicio', @service, :class =>'btn btn-primary'%> |
+			<%= link_to 'Atras', services_path, :class =>'btn btn-primary' %>
+		</div>
+	</div>
+</div>
+
