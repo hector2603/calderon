@@ -48,12 +48,12 @@
 							</div>
 						</div>
 					</div>
-					<div class="panel panel-default">
+					<div class="panel panel-default sombra">
 					  <div class="panel-body">
 						<% @articles.each do |article| %>
-						  <div class="panel panel-success ">
-						    <div class="panel-heading">
-						      <h3 class="panel-title"><%= link_to article.titulo, article %></h3>
+						  <div class="panel panel-success articulo">
+						    <div class="panel-heading  articulo-titulo ">
+						      <h3 class="panel-title titulo"><%= link_to article.titulo, article %></h3>
 						    </div>
 						    <div class="panel-body">
 						        <div class="col-md-4">
@@ -71,15 +71,15 @@
 						<% end %>
 					  </div>
 					  <div class="panel-footer">
-					  	<%= link_to 'Ver Todos', articles_path ,:class=>"btn btn-default"%>
+					  	<%= link_to 'Ver Todos', articles_path ,:class=>"btn btn-success"%>
 					  </div>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-3 pad">
-				<div class="panel panel-default">
-				  <div class="panel-body">
-				    <legend>Cotiza tu SOAT</legend>
+				<div class="panel panel-default articulo">
+				  <div class="panel-body sombra">
+				    <legend class="articulo titulo">Cotiza tu SOAT</legend>
 				    <!--<div class="form-group">
 				      <label for="inputNombre" class="col-lg-2 control-label">Nombre</label>
 					      <br><br>

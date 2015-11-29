@@ -157,8 +157,42 @@ background: url(../assets/fondo.png) repeat-x left top;
 
     color: #53694E ;
     font-weight: bold;
+    background: #b4e368;
+
 }
 
+.servicios:hover,
+.servicios:active  {
+
+    background: #66bb6a;
+    color:white;
+
+}
+
+.articulo {
+  border-color:  #8DCA7E;
+}
+
+.articulo-titulo {
+
+    color: #3c763d !important;
+    background-color: #b4e368 !important;
+    border-color: #3c763d !important;
+
+
+}
+
+.titulo {
+    color: #3c763d !important;
+
+    font-weight: bold;
+}
+
+.sombra {
+    border-color: #8DCA7E;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 2px 2px 8px #8dc47e;
+}
 
 /*
     MEDIA QUERY
