@@ -1,5 +1,5 @@
 body {
-	background-color: white;
+	background-color: #E8F5E9;
 }
 h1{
 	color: #151515;
@@ -41,8 +41,11 @@ footer{
 
 }
 .contenedor{
-	background-color: #98cc4d;
-	padding: 10px 20px 0px 20px;
+	background-color: #fff;
+	padding: 5px 20px 0px 20px;
+    border: 1px solid #8DCA7E;
+    margin-top: 10px;
+    border-radius: 4px;
 }
 p{
 	text-align : justify;
@@ -54,7 +57,118 @@ p{
 }
 
 .wrapper {
-
-background-color: #98cc4d;
-
+padding-left: 6%;
+background: url(../assets/fondo.png) repeat-x left top;
 }
+
+/*Estilos de los navs*/
+
+/* Definimos un ancho 100% y una altura fija para nuestro menú */
+.navigator{
+    background: #b4e368;
+    border: 1.9px solid #8DCA7E;
+
+   
+}
+
+/* El logo sera flotado a la izquierda */
+#logo{
+    background: url(loguito.png) no-repeat 0 0;
+    display: block;
+    float: left;
+    margin: 6px 10px 0;
+    width: 82px;
+    height: 46px;
+    text-indent: -9999px
+}
+
+/* Nuestro nav con id #menu lo flotaremos a la derecha*/
+
+
+    /* Quitamos estilos por defecto de el tag UL */
+    #menu ul{
+        list-style: none;
+        font-size: 14px;
+    }
+        
+        /* Centramos y ponemos los textos en mayuscula */
+        #menu li{
+         
+           text-transform: uppercase;
+           text-align: center;
+        }
+            
+            /* Damos estilo a nuestros enlaces */
+            #menu li a{
+              
+                color:#53694E;
+                text-decoration: none;
+                height: 52px;
+                line-height: 60px;
+                padding: 0 26px;
+                font: bold 14px 'Open Sans', sans-serif;
+                padding-top: 20px;
+   			    padding-bottom: 10px;
+            }
+            #menu li a:hover{
+                background: #66bb6a;
+                color: white;
+            }
+    
+    /* Estilos #nav-mobile y lo ocultamos */
+    #nav-mobile{
+        display: none;
+        background: url(nav.png) no-repeat center center;
+        float: right;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        right: 0;
+        top:0;
+        opacity: .6;
+
+    }   
+        /* Agregaremos esta clase a #nav-mobile, cuando el menu mobile haya sido desplegado */
+        #nav-mobile.nav-active{
+            opacity: 1;
+        }
+
+/* Content */
+#content{
+    width: 80%;
+    margin: 60px 10%;
+    text-align: center;
+    overflow: hidden;
+}
+    h2{
+        font-size: 50px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #624c3f;
+    }
+
+.pad {
+
+	padding-right: 0px;
+}    
+
+
+/*
+    MEDIA QUERY
+*/
+
+@media only screen and (max-width: 768px) {
+          #menu li a{
+
+          	height: 20px;
+          	font: bold 14px 'Open Sans', sans-serif;
+         	
+   			padding-bottom: 20px;
+
+
+          }
+  
+}
+
+
+/*</estilos de los navs>*/

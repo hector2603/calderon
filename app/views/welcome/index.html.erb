@@ -76,7 +76,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-3 pad">
 				<div class="panel panel-default">
 				  <div class="panel-body">
 				    <legend>Cotiza tu SOAT</legend>
@@ -88,14 +88,14 @@
 				      </div>
 				    </div>-->
 				    <div class="form-group">
-				      <div class="col-lg-10">
+				      <div class="col-lg-10 col-lg-offset-1">
 						<%= link_to(quotes_path,:class=>"thumbnail") do %>
 							<%= image_tag "soatInicio.jpg", :alt => "imagenSoat", :title => "ImagenSoat"%>
 						<% end %>
 				      </div>
 				    </div>
 				    <div class="form-group">
-				      <div class="col-lg-10 col-lg-offset-2">
+				      <div class="col-lg-10 col-lg-offset-4">
 				      	<%=link_to "Cotizar",quotes_path, :class => "btn btn-success"%>
 				      </div>
 				    </div>

@@ -172,6 +172,7 @@ fieldset {
 legend {
   padding: 0;
   border: 0;
+  text-align: center;
 }
 textarea {
   overflow: auto;
@@ -4280,10 +4281,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   padding: 15px 15px;
   font-size: 18px;
   line-height: 20px;
+
 }
 .navbar-brand:hover,
 .navbar-brand:focus {
   text-decoration: none;
+
 }
 .navbar-brand > img {
   display: block;
@@ -4500,23 +4503,28 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-color: #e7e7e7;
 }
 .navbar-default .navbar-brand {
-  color: #777;
+     color: #53694E;
+     font-weight:bold;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: #5e5e5e;
+  color: white;
   background-color: transparent;
 }
 .navbar-default .navbar-text {
   color: #777;
 }
 .navbar-default .navbar-nav > li > a {
-  color: #777;
+    color: #53694E;
+    padding-top: 20px;
+    font: bold 14px 'Open Sans', sans-serif;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #333;
-  background-color: transparent;
+  background: #66bb6a;
+  color: white;
+  height: 57px;
+ 
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
@@ -4531,18 +4539,18 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   background-color: transparent;
 }
 .navbar-default .navbar-toggle {
-  border-color: #ddd;
+  border-color: #8DCA7E;
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-  background-color: #ddd;
+  background-color: #98CD4D;
 }
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #888;
+  background-color: white;
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-  border-color: #e7e7e7;
+  border-color: #8DCA7E;
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
@@ -6758,3 +6766,11 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+
+@media (max-width: 768px) {
+ .wrapper {
+padding-left: 1% !important;
+
+}
+}
+
