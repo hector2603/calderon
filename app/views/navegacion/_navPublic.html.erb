@@ -19,7 +19,7 @@
 	      <ul class="nav navbar-nav">
 	      	<li class="margen_nav">
 	      		<div class="btn-group" role="group" aria-label="...">
-	      			<%= link_to 'Servicios', types_path , type:"button", :class =>"btn btn-default border_boton" %>
+	      			<%= link_to 'Servicios', types_path , type:"button", :class =>"btn btn-default border_boton servicios" %>
 
 				  <div class="btn-group" role="group">
 				    <a type="button" class="btn btn-default dropdown-toggle border_boton" data-toggle="dropdown" aria-expanded="false">
@@ -41,7 +41,7 @@
 			<div class="navbar-form navbar-right" >
 				<%= form_tag("/buscars", method: "get") do %>
 				  <%= text_field_tag(:busqueda,"",{:class=>"form-control",:placeholder=>"Buscar"}) %>
-				  <%= submit_tag("Buscar",:class=>"btn btn-default") %>
+				  <%= submit_tag("Buscar",:class=>"btn btn-success") %>
 				<% end %>
 			</div>
 	    </div>
