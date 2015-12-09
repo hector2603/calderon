@@ -12,11 +12,11 @@
         </div>
       <% end %>
       <div class="form-group">
-        <%= f.label :Nombre %><br>
+        <%= f.label :Nombre, :class => 'servicio' %><br>
         <%= f.text_field :nombre ,:class => 'form-control'%>
       </div>
       <div class="form-group">
-        <%= f.label :Tipo %><br>
+        <%= f.label :Tipo, :class => 'servicio' %><br>
         <%= f.select(:type_id ,[],{},{ :class => 'form-control' } )  do %>
           <% @types.each do |c| -%>
             <%= content_tag(:option, c.nombre, value: c.id) %>
@@ -24,11 +24,11 @@
         <% end %>
       </div>
       <div class="form-group">
-        <%= f.label :Resumen %><br>
+        <%= f.label :Resumen, :class => 'servicio' %><br>
         <%= f.text_area :resumen ,:class => 'form-control'%>
       </div>
       <div class="form-group">
-        <%= f.label :Descripción %><br>
+        <%= f.label :Descripción, :class => 'servicio' %><br>
         <%= f.text_area :descripcion ,:class => 'form-control'%>
       </div>
       <!--<div class="form-group">

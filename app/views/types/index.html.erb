@@ -15,13 +15,13 @@
   <div class="panel-body">
     <div class="col-md-2">
       <div class="btn-group-vertical well" role="group" aria-label="...">
-        <h3 class="text-center">Servicios</h3>
+        <h3 class="text-center servicio">Servicios</h3>
         <% @types.each do |type| %>
-          <%= link_to type.nombre, {controller: "services", action: "index", tipo_id: type.id}, :class =>"btn btn-default" %>
+          <%= link_to type.nombre, {controller: "services", action: "index", tipo_id: type.id}, :class =>"btn btn-success" %>
         <% end %>
       </div>
     </div>
-    <div class="col-md-10">
+    <div class="col-md-10 panel panel-body sombra">
       <h1 class="text-center">Outsourcing</h1>
       <p>
         Brindamos servicio de acompañamiento contable y fiscal con un Contador profesional para la revisión de los registros de la operación del negocio y liquidación de impuestos nacionales y locales, con un acompañamiento tributario preventivo legal a la que todas las empresas tienen derecho con el ánimo de buscar reducir, eliminar o diferir la carga tributaria en la organización.

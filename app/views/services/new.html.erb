@@ -9,14 +9,17 @@
 			<div class="col-md-12 ">
 			  <ol class="breadcrumb">
 			    <li><%= link_to 'Inicio', root_url %></li>
-			    <li class="active">Crar Servicio</li>
+			    <li class="active">Crear Servicio</li>
 			  </ol>
 			</div>
 		</div>
-		<h1 class="text-center">Nuevo Servicio</h1>
+
+		<div class="panel panel-body sombra">
+		<h1 class="text-center servicio">Nuevo Servicio</h1>
 			<%= render 'form' %>
 		<div class="form-group">
 			<%= link_to 'Atras', services_path, :class =>'btn btn-primary' %>
+		</div>
 		</div>
 	</div>
 </div>
