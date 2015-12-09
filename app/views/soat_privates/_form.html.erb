@@ -14,23 +14,23 @@
       <% end %>
 
       <div class="form-group">
-        <%= f.label :Vehículo %><br>
+        <%= f.label :Vehículo, :class => 'servicio' %><br>
         <%= f.text_field :vehiculo ,:class => 'form-control'%>
       </div>
       <div class="form-group">
-        <%= f.label "Clase de vehículo" %><br>
-        <%= f.text_field :clase ,:class => 'form-control'%>
+        <%= f.label "Clase de vehículo", :class => 'servicio' %><br>
+        <%= f.text_field :clase %>
       </div>
       <div class="form-group">
-        <%= f.label :Prima %><br>
+        <%= f.label :Prima, :class => 'servicio' %><br>
         <%= f.number_field :prima ,:class => 'form-control'%>
       </div>
       <div class="form-group">
-        <%= f.label :Contribución %><br>
+        <%= f.label :Contribución, :class => 'servicio' %><br>
         <%= f.number_field :contribucion ,:class => 'form-control'%>
       </div>
       <div class="form-group">
-        <%= f.label "Tasa Runt" %><br>
+        <%= f.label "Tasa Runt", :class => 'servicio' %><br>
         <%= f.number_field :tasa ,:class => 'form-control'%>
       </div>
       <div class="actions">

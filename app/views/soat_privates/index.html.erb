@@ -12,11 +12,11 @@
       </ol>
     </div>
   </div>
-  <h1 class="text-center">Soat</h1>
+  <h1 class="text-center servicio">Soat</h1>
   <div class="panel-body">
-    <div class="table-responsive">
+    <div class="table-responsive sombra">
       <table class="table table-striped">
-        <thead>
+        <thead class="servicio">
           <tr>
             <th>Vehículo</th>
             <th>Clase de vehículo</th>
@@ -37,7 +37,7 @@
               <td><%= soat_private.contribucion %></td>
               <td><%= soat_private.tasa %></td>
               <td><%= soat_private.tasa+soat_private.contribucion+soat_private.prima %></td>
-              <td><%= link_to 'Editar', edit_soat_private_path(soat_private), :class =>"btn btn-default" %></td>
+              <td><%= link_to 'Editar', edit_soat_private_path(soat_private), :class =>"btn btn-success" %></td>
             </tr>
           <% end %>
         </tbody>
@@ -46,4 +46,4 @@
   </div>
 </div>
 
-<%= link_to 'New Soat private', new_soat_private_path %>
+<%= link_to 'New Soat private', new_soat_private_path,:class =>'btn btn-success margen'  %>
