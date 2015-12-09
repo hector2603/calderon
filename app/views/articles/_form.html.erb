@@ -13,21 +13,21 @@
         </div>
       <% end %>
       <div class="form-group">
-        <%= f.label :título %>
+        <%= f.label :título, :class => 'servicio' %>
         <%= f.text_field :titulo ,:class => 'form-control'%>
       </div>
       <div class="form-group">
-        <%= f.label :resumen %><br>
+        <%= f.label :resumen, :class => 'servicio' %><br>
         <%= f.text_area :resumen ,:class => 'form-control' %>
       </div>
       <div class="form-group">
-        <%= f.label :Texto %><br>
+        <%= f.label :Texto, :class => 'servicio' %><br>
         <%= f.text_area :body ,:class => 'form-control',style:"display:none", id:"textoArticulo"  %>
         <%= f.text_area :markup_body ,:class => 'form-control',style:"display:none", id:"markupTextoArticulo"  %>
         <div id="epiceditor" style="height:250px;"></div>
       </div>
       <div class="form-group">
-        <%= f.label :Portada %>
+        <%= f.label :Portada, :class => 'servicio' %>
         <%= f.file_field :cover %>
         <p class="help-block">Archivos permitidos: jpg, jpeg y png</p>
       </div>

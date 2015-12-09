@@ -11,14 +11,16 @@
 			<div class="col-md-12 ">
 			  <ol class="breadcrumb">
 			    <li><%= link_to 'Inicio', root_url %></li>
-			    <li class="active">Crar Artículo</li>
+			    <li class="active">Crear Artículo</li>
 			  </ol>
 			</div>
 		</div>
-		<h1 class="text-center">Nuevo Artículo</h1>
+		<div class="panel panel-body sombra">
+		<h1 class="text-center servicio">Nuevo Artículo</h1>
 			<%= render 'form' %>
 		<div class="form-group">
 			<%= link_to 'Atras', articles_path, :class =>'btn btn-primary' %>
 		</div>
+	</div>	
 	</div>
 </div>
