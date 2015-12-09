@@ -214,3 +214,111 @@ background: url(../assets/fondo.png) repeat-x left top;
 
 
 /*</estilos de los navs>*/
+
+
+/*estilos para el footer*/
+
+footer .bar {
+    background-color: #1E2629;
+    padding: 20px 0;
+}
+footer .nombre, .social {
+    font-size: 12px;
+    margin: 0 auto;
+   
+    position: relative;
+
+}
+
+.social {
+    position: absolute;
+    margin-top: 1.7%;
+    right: 0;
+    top: 0;
+}
+.social a {
+    color: #778888;
+    margin-left: 20px;
+}
+.social a:hover {
+    color: #FFFFFF;
+}
+    
+.social a:hover  .icon {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+.social .info {
+    display: inline-block;
+    vertical-align: middle;
+}
+.social .info .follow {
+    display: block;
+}
+.social .info .num {
+    display: block;
+}
+
+.social i.fa-envelope, 
+i.fa-facebook, i.fa-phone{
+    background-color: #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+.nombre {
+color: #ffffff;
+ text-align: center;
+}
+
+  .facebook,.telefono,.mensaje {
+        float: left !important;
+        position:relative;
+
+    }
+
+
+/* responsive rules */
+@media screen and (max-width: 1000px){
+    .social{
+        float:none;
+        text-align:center;
+    }
+    .social {
+        position:relative;
+        margin:10px 0;
+    }
+   
+    .bar {
+        position:relative;
+    }
+
+   .facebook,.telefono,.mensaje{
+        float: none !important;
+        position:relative;
+        text-align: center;
+
+    }
+
+  
+
+  .facebook span,.telefono span,.mensaje span {
+
+        width: 100%;
+  }
+
+
+
+}
+
+
+
