@@ -23,9 +23,12 @@ class ContactosController < ApplicationController
 
   def create
     @contacto = Contacto.new(contacto_params)
-    @contacto.save
-    flash[:notice] = "Se Envío el mensaje correctamente" 
-    redirect_to root_path 
+    if @contacto.save
+      flash[:notice] = "Se Envió el mensaje correctamente" 
+      redirect_to root_path 
+    else
+      respond_with(@contacto)
+    end
   end
 
   def update
@@ -44,6 +47,6 @@ class ContactosController < ApplicationController
     end
 
     def contacto_params
-      params.require(:contacto).permit(:nombre, :asunto, :texto, :numero)
+      params.require(:contacto).permit(:nombre, :asunto, :texto, :numero,:email)
     end
 end

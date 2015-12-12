@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calderón Gonzaléz</title>
+</head>
+<body>
+	<h1>Nuevo mensaje</h1>
+	<p> Un mensaje de <%= @contacto.nombre %>  ha llegado </p><br>
+	<h2>Asunto</h2><br>
+	<p><%= @contacto.asunto %></p><br>
+	<p>Ver en la página <%= link_to "Leer más", contacto_url(@contacto)%></p>
+</body>
+</html>

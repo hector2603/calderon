@@ -1,6 +1,8 @@
 class AboutsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit, :destroy, :create, :update,:show] 
   before_action :set_about, only: [:show, :edit, :update, :destroy]
+  before_action :crear_about
+
 
   respond_to :html
 
@@ -32,9 +34,14 @@ class AboutsController < ApplicationController
     respond_with(@about)
   end
 
-  def destroy
-    @about.destroy
-    respond_with(@about)
+  def crear_about
+    
+    if About.exists?(id: 1)
+      print "Ya existe" 
+    else
+      @about = About.new(titulo: 'Hola', texto: 'Hola')
+      @about.save 
+    end 
   end
 
   private
