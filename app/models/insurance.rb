@@ -1,8 +1,8 @@
 class Insurance < ActiveRecord::Base
 	validates :nombre, :resumen, :descripcion, presence: true
-	validates :nombre, length: { in: 1..30 , message: "debe tener entre 1 y 30 caracteres"}
-	validates :resumen, length: { in: 1..100 , message: "debe tener entre 1 y 100 caracteres"}
-	validates :descripcion, length: { in: 1..1000 , message: "debe tener entre 1 y 1000 caracteres"}
+	validates :nombre, length: { in: 1..75 , message: "debe tener entre 1 y 75 caracteres"}
+	validates :resumen, length: { in: 1..1000 , message: "debe tener entre 1 y 1000 caracteres"}
+	validates :descripcion, length: { in: 1..10000 , message: "debe tener entre 1 y 10000 caracteres"}
 
 	
 	def self.search(busqueda)

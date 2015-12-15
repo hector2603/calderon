@@ -17,9 +17,9 @@
     <div class="row">
       <div class="col-md-2">
         <div class="btn-group-vertical well" role="group" aria-label="...">
-          <h3 class="text-center">Servicios</h3>
+          <h3 class="text-center servicio">Servicios</h3>
           <% @tipos_barra.each do |type| %>
-            <%= link_to type.nombre, {controller: "services", action: "index", tipo_id: type.id}, :class =>"btn btn-default" %>
+            <%= link_to type.nombre, {controller: "services", action: "index", tipo_id: type.id}, :class =>"btn btn-success" %>
           <% end %>
         </div>
       </div>
@@ -28,8 +28,8 @@
         <div class="row">
           <% @services.each do |service| %>
             <div class="col-md-4">
-              <div class="panel panel-default ">
-                <div class="panel-heading">
+              <div class="panel panel-success sombra articulo">
+                <div class="panel-heading articulo-titulo">
                   <h3 class="panel-title"><%= link_to service.nombre, service %></h3>
                 </div>
                 <div class="panel-body">

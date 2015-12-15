@@ -14,7 +14,9 @@
   </div>
   <h1 class="text-center"><%= @about.titulo %></h1>
   <div class="panel-body">
-    <%= @about.texto %>
+    <p>
+      <%= @about.texto %>
+    </p>
   </div>
   <% if user_signed_in? %>
     <nav>
